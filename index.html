@@ -8,27 +8,37 @@
     </script>
     <script>
         $(function() { //DONT CHANGE THIS
+        $("body").css("background-color","peachpuff");
+        $("body").css("text-align", "center");
+        
              $('button').click(function() {
                var name = $('#Name').val();
-                var dest = $('#Destination').val();
-                var classs = $('input[name= Seating :checked').val();
+                var dest = $('#destination').val();
+                var classs = $("input[name='Seating']:checked").val();
                 var message= "Congrats " + name+  " You have a ticket to " + dest + " in " + classs + " seating. Thank you for booking with HSTAT Airline. We wish you a safe flight."
+                 $('h3').text(message);
+                 $('h3').css('font-family', "Lato");
+                 
                 });
+                
       });
     </script>
 </head>
 
 <body>
-    <h1>Hello! Welcome to HSTAT Airlines!</h1>
-    <h1>Let's begin to plan your trip!</h1>
+    <h1>Hello! Welcome to HSTAT Airlines!
+    <br>
+    Let's begin to plan your trip!</h1>
     Name: <input id="Name" /><br>
-    <br>Destination: <input id=" Destination">
+    <br>Destination: <input id="destination">
     <p>Choose Your Cabin Experiance:</p>
+  
     <input type="radio" name="Seating" value="First Class"> First Class<br>
     <input type="radio" name="Seating" value="Economy">Ecomony Class <br>
+
     <br>
     <button> Get My Ticket! </button>
-    
+     <h3></h3>
 
 </body>
 
